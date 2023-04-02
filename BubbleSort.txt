@@ -1,0 +1,14 @@
+void bubbleSort(Gift *gifts, int k)
+{
+    for (int i = 0; i < k; i++)
+    {
+        for (int j = 1; j < (k - i); j++)
+        {
+            if (gifts[j].v < gifts[j - 1].v){
+                    Gift temp = gifts[j-1]; 
+                    gifts[j-1] = gifts[j];
+                    gifts[j] = temp;
+            }
+        }
+    }
+}
